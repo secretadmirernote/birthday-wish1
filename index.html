@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Alice ✨</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Tanu Singh ✨</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <canvas id="confetti"></canvas>
-    <div class="stars"></div>
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="title">Happy Birthday</h1>
-            <p class="subtitle">Alice</p>
-            <p class="date-text">March 25, 2006</p>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-value" id="days">0</span>
-                    <span class="countdown-label">Days</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="hours">0</span>
-                    <span class="countdown-label">Hours</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="minutes">0</span>
-                    <span class="countdown-label">Minutes</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="seconds">0</span>
-                    <span class="countdown-label">Seconds</span>
-                </div>
+
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content container reveal">
+            <p class="tag">A little cinematic surprise for a mysterious topper 💫</p>
+            <h1>Happy Birthday <span>Tanu Singh</span> 🎂</h1>
+            <p class="hero-text">
+                Aaj ka din sirf tumhare naam — grace, focus, aur quiet fire ka perfect combo.
+            </p>
+            <button id="burstBtn" class="glow-btn">Tap for Celebration ✨</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section container reveal">
+            <h2>🌸 Radha Ji ki blessings</h2>
+            <p class="card">
+                Radha Rani tumhe hamesha prem, shanti, clarity aur divine protection dein.
+                Tumhare har kadam par unki kripa bani rahe, har mehnat ka best result mile,
+                aur tumhari life mein khushiyon ka rang kabhi kam na ho. Jo sapna tum dil se dekho,
+                woh reality ban kar tumhe proud feel karaye.
+            </p>
+        </section>
+
+        <section class="section container reveal">
+            <h2>🔥 “Do what sets your soul on fire” — That is YOU</h2>
+            <div class="grid two">
+                <article class="card">
+                    <h3>Why this quote suits you</h3>
+                    <p>
+                        Tum bas quote post nahi karti — tum actually uss line ko live karti ho.
+                        Discipline ke saath goals chase karna, distractions ko ignore karna,
+                        aur har din better banna... that is real soul-on-fire energy.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Suggested line for this vibe</h3>
+                    <p class="highlight-line" id="rotatingLine">
+                        She doesn’t chase noise; she chases purpose — and that’s why she shines.
+                    </p>
+                </article>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll to continue</span>
-        </div>
-    </section>
-    <section class="wishes">
-        <div class="container">
-            <h2>Special Wishes for You</h2>
-            <div class="wish-cards">
-                <div class="wish-card">
-                    <div class="wish-icon">🎂</div>
-                    <h3>Make a Wish</h3>
-                    <p>May all your dreams come true this year and beyond.</p>
-                </div>
-                <div class="wish-card">
-                    <div class="wish-icon">✨</div>
-                    <h3>Shine Bright</h3>
-                    <p>You deserve to sparkle and shine every single day.</p>
-                </div>
-                <div class="wish-card">
-                    <div class="wish-icon">🌟</div>
-                    <h3>Be Happy</h3>
-                    <p>Surrounded by love, joy, and endless possibilities.</p>
-                </div>
-                <div class="wish-card">
-                    <div class="wish-icon">🎉</div>
-                    <h3>Celebrate</h3>
-                    <p>Today is your day to celebrate you!</p>
-                </div>
+        </section>
+
+        <section class="section container reveal">
+            <h2>🌙 Mysterious, but unforgettable</h2>
+            <div class="grid three">
+                <article class="card">
+                    <h3>Soft Aura, Strong Mind</h3>
+                    <p>
+                        Tumhari vibe calm hai, but presence powerful. Tum kam bol kar bhi impact chhod deti ho.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Rare Personality</h3>
+                    <p>
+                        Har kisi ko tumhe samajhna easy nahi — aur wahi tumhe special banata hai.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Classy Mystery</h3>
+                    <p>
+                        Tumhari simplicity ke peeche jo depth hai na, woh hi tumhari real charm hai.
+                    </p>
+                </article>
             </div>
-        </div>
-    </section>
-    <section class="message">
-        <div class="container">
-            <div class="message-box">
-                <p class="message-text">"Another year older, another year wiser, another year more amazing."</p>
-                <p class="message-author">— Wishing you the happiest of birthdays</p>
+        </section>
+
+        <section class="section container reveal">
+            <h2>📚 For the hardworking topper</h2>
+            <div class="grid two">
+                <article class="card">
+                    <h3>Compliment</h3>
+                    <p>
+                        Bachpan se topper rehna luck nahi hota — it takes consistency, sacrifice,
+                        aur next-level focus. Tum hard work ko elegance ke saath carry karti ho.
+                    </p>
+                </article>
+                <article class="card">
+                    <h3>Extra sweet compliments you can use</h3>
+                    <ul>
+                        <li>“Beauty with brains is common, but purpose with purity is rare — that’s you.”</li>
+                        <li>“You make discipline look beautiful.”</li>
+                        <li>“Your ambition is attractive, your calm is addictive.”</li>
+                        <li>“Topper hona achievement hai, humble rehna character hai.”</li>
+                    </ul>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 Birthday Wishes | Made with <span class="heart">❤️</span></p>
+        <p>Made with ❤️ for Tanu’s special day • Click anywhere for confetti</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
