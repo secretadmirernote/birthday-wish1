@@ -1,45 +1,152 @@
-/* Beautiful Music Player Styles */
+:root {
+    --bg: #070612;
+    --panel: rgba(255, 255, 255, 0.08);
+    --text: #f8f7ff;
+    --muted: #c7c4df;
+    --accent: #ff8acb;
+    --accent-2: #8be7ff;
+}
 
-.music-player {
-    width: 100%;
-    max-width: 600px;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at 10% 20%, #24174f 0%, transparent 40%),
+        radial-gradient(circle at 90% 10%, #30284c 0%, transparent 35%),
+        var(--bg);
+    line-height: 1.6;
+}
+
+#confetti {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 30;
+}
+
+.container {
+    width: min(1000px, 92vw);
     margin: 0 auto;
-    padding: 20px;
-    background: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
 }
 
-.music-player:hover {
-    transform: scale(1.02);
+.hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.music-player .controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, rgba(7, 6, 18, 0.35), rgba(7, 6, 18, 0.9));
 }
 
-.music-player button {
-    background: #ff4caf50;
-    color: white;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 24px;
+}
+
+.tag {
+    color: var(--accent-2);
+    letter-spacing: 0.04em;
+    margin-bottom: 14px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 7vw, 4.3rem);
+    line-height: 1.12;
+}
+
+h1 span {
+    color: var(--accent);
+    text-shadow: 0 0 20px rgba(255, 138, 203, 0.45);
+}
+
+.hero-text {
+    max-width: 760px;
+    margin: 18px auto 28px;
+    color: var(--muted);
+}
+
+.glow-btn {
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    background: linear-gradient(120deg, var(--accent), #ff6f9f);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    box-shadow: 0 10px 28px rgba(255, 111, 159, 0.32);
 }
 
-.music-player button:hover {
-    background: #ff3e40;
+.section {
+    padding: 70px 0;
 }
 
-@media (max-width: 768px) {
-    .music-player {
-        padding: 10px;
-    }
-    .music-player button {
-        padding: 8px;
-    }
+.section h2 {
+    margin: 0 0 18px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+}
+
+.grid.two {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid.three {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 18px;
+    backdrop-filter: blur(6px);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+.highlight-line {
+    color: #ffe39f;
+    font-weight: 600;
+}
+
+footer {
+    padding: 26px 12px 36px;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s ease;
 }
